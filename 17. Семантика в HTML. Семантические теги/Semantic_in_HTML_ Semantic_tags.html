@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17. Семантика HTML</title>
+</head>
+<body>
+
+<!-- https://doka.guide/html/seo-for-beginners/ -->
+
+    <main>main</main> <!-- main предназначен для основного контента страницы -->
+    <main hidden>main</main> <!-- атрибут hidden скрывает main -->
+<hr>
+    <section>section</section> <!-- dection создаёт раздел сайта. Представляет собой автономный раздел -->
+
+<hr>
+
+    <header>header</header> <!-- header представляет собой вводный контент, обычно включает лого, навигацию,форму поиска, имя автора и т.п. -->
+
+<hr>
+
+    <nav></nav> <!-- nav Обозначает главные ссылки навигации. Следует использовать лишь для главных навигационных блоков-->
+
+    <!-- nav часто используется какими то элементами списка например: -->
+    <nav>
+        <ul>
+            <li>
+                <a href="#">link 1</a>
+                <a href="#">link 2</a>
+                <a href="#">link 3</a>
+            </li>
+        </ul>
+    </nav>
+
+<hr>
+    
+    <footer>footer</footer> <!-- footer представляет собой нижный колонтитул. Обычно содержит информацию об авторе раздела, информацию об авторском праве или ссылки на связанные документы. Footer не создаёт новый раздел в структуре HTML. Не секционный.-->
+
+<hr>
+
+    <!-- article может представлять собой на форуме, запись в блоге или какой-либо другой самостоятельный фрагмент содержимого. Каждый элемент article должен быть идентифицирован путём добавления заголовка от h1 до h6 -->
+    <article>
+        <h1>Forecast</h1>
+        <article>
+            <h2>29 October 2023</h2>
+            <p>Sunny</p>
+        </article>
+        <article>
+            <h2>30 October 2023</h2>
+            <p>Rainy</p>
+        </article>
+    </article>
+
+<hr>
+
+    <!-- address задаёт контактные данные для ближайшего родительского <article> или <body> -->
+    <address>
+        <a href="mailto: fn@.co">fn@.co</a>
+        <br>
+        <a href="tel:+5854621321546">my number</a>
+    </address>
+
+    <hr>
+    
+    <aside>aside tag</aside> <!-- aside представляет собой часть документа, чаще всего представлен в виде боковой панели, список или меток "что бы сделать его боковой панелью, нужно стилизовать"-->
+
+    <br>
+
+     <!-- figure иллюстрация с необязательной подписью, представляет самостоятельный контент, часто с подписью (заголовком), которая указывается с помощью элемента (<figcaption>) -->
+    <figure>
+        <!-- внутри есть тег blockquote, figcaption -->
+        <blockquote cite="https://blog.hubspot.com/sales/famous-quotes">
+            <p>The way to get started it to quite talking and begin doing</p>
+        </blockquote>
+
+        <figcaption>
+            Walt Disnay
+            <cite>blog.hubspot.com</cite>
+        </figcaption>
+    </figure>
+
+<hr>
+
+    <!-- details Нативный аккордеон.Используется для раскрытия скрытой (дополнительной) информации -->
+    <details>
+        <!-- summaru тег нужен для названия выпадающей информации -->
+        <summary>drop-down</summary>
+        <!-- список -->
+        <!-- быстро развернуть список ul>li>{$} -->
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </details>
+    
+    <p>
+        Paragraph adout tad <code> time </code>
+
+        <time datetime="2023-11-14"> 14 November </time> <!-- time этот элемент предназначен для представления дат и времени в машиночитаемом формате -->
+    </p>
+
+<hr>
+
+    <!-- table нужен для составления таблиц -->
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- form раздел документа, содержищий интерактивные элементы управления, которые позволяют пользователюотправлять информацию на сервер. -->
+    <form action="">
+        <label for="">Take your name</label>
+        <input type="text">
+    </form>
+
+    <form action="">
+        <!-- fieldset используется для группировки элементов в форме, идёт с элементом legend -->
+        <fieldset> <!-- fieldset создаёт рамку вокруг элементов форм -->
+            <legend>Type your favorite movie</legend> <!-- legend делает заголоврок для элементов формы -->
+            <input type="radio" name="" id="">
+            <label for="">Matrix</label>
+            <input type="radio" name="" id="">
+            <label for="">Matrix</label>
+            <input type="radio" name="" id="">
+            <label for="">Matrix</label>
+        </fieldset>
+    </form>
+
+<hr>
+
+    <!-- dialog определяет диалоговое окно или другой интерактивный элемент -->
+    <!-- отрибут open включает тег dialog -->
+    <dialog >
+        <p>Hello averyone!</p>
+
+        <form method="dialog"> <!-- когда dialog срабатывает, закрывается окно -->
+            <button>Ok</button>
+    <!--    <button type="button">Ok</button>  --  если бы стоял тип button то окно закрываться не будет -->
+        </form>
+    </dialog>
+
+    <hr>
+
+    <!-- DL(Discription List) представляет собой список описаний -->
+    <dl>
+        <dt>Рысь</dt>
+        <dd>Охотиться рысь в сумерках. Вопреки распространенным представлениям, она никогда не прыгает на свою жертву с дерева, но предпочитает подкарауливать свою жертву в засаде или скрывать.</dd>
+        
+        <dt>Тигр</dt>
+        <dd>Тигр является одним из крупнейших наземных хищников, уступая по массе лишь белому и бурому медведям.</dd>
+    </dl>
+
+    <p>
+        <!-- mark Представляет текст, выделенный в справочных уелях из-за своей фктуальности в определённом контексте -->
+        Не относитесь к жизни <mark> сильно серьёзно </mark>, всё ровно вам из неё живым не выбраться.
+    </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+</body>
+</html>

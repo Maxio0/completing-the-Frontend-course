@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Селекторы а HTML CSS. Class, id, tag, style</title>
+
+    <style>
+        p {
+            color: tomato;
+        }
+
+        .text {  /*точка это селектор класса(вызывает класс)*/
+            color: orange;
+        }
+
+        .text > span { /* > данный оператор вложенности, стилизует только первый span  */
+            font-size: 33px;
+            color:chocolate;
+        }
+
+        #text-id {  /* решетка это селектор id  */
+            color: red;
+        }
+
+        [type="button"] {  /* квадратные скобки это селектор атрибута */
+            width: 250px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <p class="text" id="text-id">    <!-- атрибуты class, id -->
+
+        <span>Title SPAN</span> <!-- составные селекторы -->
+
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolor fuga ex quis doloribus, rerum debitis iste vero ea repellendus illo perferendis consequatur ad facilis vitae quam sed, molestias laudantium!
+    </p>
+
+    <!-- стилизация по атрибутам -->
+    <button type="button">
+        just button
+    </button>
+
+    <button type="submit"> <!-- с submit стилизация не работает если не поменять на button -->
+        button2
+    </button>
+</body>
+</html>

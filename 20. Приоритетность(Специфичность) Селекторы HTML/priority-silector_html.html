@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>priority-silector_html</title>
+
+    <style>
+        p {
+            color: brown;
+        }
+
+        .text {
+            color: yellowgreen;
+        }
+
+        #text-id {
+           color: violet !important; /* !important создаёт самый высокий приоритет(c !important нужно быть осторожным, максимально нужно избегать данного правила, может быть сложнее отладка, сложнее может быть написание силекторов) */ 
+        }
+    </style>
+</head>
+<body>
+    <p class="text" id="text-id" style="color: black;"> <!-- style будет приоритетнее, потому что атрибут style имеет наивысший приоритет --> 
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum illum perspiciatis similique suscipit dolore, numquam error id dicta molestiae debitis reprehenderit quo enim. Nostrum eius labore a sunt quibusdam quisquam.
+    </p>
+</body>
+</html>

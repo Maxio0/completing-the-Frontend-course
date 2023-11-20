@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Forms in HTML CSS</title>
+</head>
+<body>
+    <!--<form action="https://google.com" method="get" target="_blank"> target="_blank" открывает запрос в новой вкладке  --> 
+    
+    <form action="mailto:it@mail.ru" method="post" target="_blank" class="form"> <!-- отправляет запрос на почту -->
+        <fieldset class="fieldset">
+            <legend>Required fields</legend>
+        
+        <!-- добавляем параметры и значения, оформляем формы -->
+        <label for="firstNameID" class="form-label">FirstName: </label>    <!-- название для input -->
+        <input type="text" name="firstName" id="firstNameID" placeholder="type your first name" required class="form-control">   <!-- добавляем уникальный модификатор id. required не даёт перейти по запросу без ввода значиния в поле input -->
+        <br><br>
+
+
+        <label for="lastNameID" class="form-label">LastName: </label>
+        <input type="text" name="lastName" id="lastNameID" placeholder="type your last name" required class="form-control">
+        <br><br>
+
+
+        <label for="emailID"class="form-label">Email: </label>
+        <input type="email" name="email" id="emailID" placeholder="type your email" required class="form-control">
+        <br><br>
+
+    </fieldset>
+    <br>
+
+    <label for="questionID" class="form-label">Your questions: </label>
+    <textarea name="questions" id="questionID" cols="20" rows="5" placeholder="Type your questions" class="form-control"></textarea>
+
+    <br>
+            <!-- <input type="submit" value="submit"> -->
+            <button type="submit" class="form-control form-submit">Submit btn</button>
+    </form>
+</body>
+</html>

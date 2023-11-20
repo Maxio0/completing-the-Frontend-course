@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables in HTML CSS</title>
+    <style>
+        .table {
+            /*border-width: 1px;
+            border-style: solid;
+            border-color: black;
+            border: 1px solid black;*/
+            border-collapse: collapse;
+        }
+
+        td, th {  /* селектор по тегу */
+            border: 1px solid black;
+            padding: 10px; /* padding - отступ */
+        }
+    </style>
+</head>
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Skills</th>
+                <th>Stars</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>React</td>
+                <td>⭐⭐⭐⭐⭐</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Angular</td>
+                <td>⭐⭐⭐</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Vue</td>
+                <td>⭐⭐</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>javaScript</td>
+                <td>⭐⭐⭐⭐⭐</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td colspan="2"> <!-- colspan объеденяет колонки -->
+                    <img src="https://placehold.co/600x400/png" alt="">
+                </td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>-</td>
+                <td colspan="2" rowspan="2"> <!-- rowspan объеденяет строки(colspan - rpwspan оба этих атрибута добавляются ТОЛЬКО на элементы td или th) -->
+                    Do not stop learninng!
+                </td>
+            </tr>
+            <tr>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td colspan="3">Just do it!</td>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
